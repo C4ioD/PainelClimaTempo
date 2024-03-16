@@ -1,0 +1,100 @@
+JSON
+JSON format API response example
+
+
+                          
+{
+  "coord": {
+    "lon": 10.99,
+    "lat": 44.34
+  },
+  "weather": [
+    {
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "icon": "10d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 298.48,
+    "feels_like": 298.74,
+    "temp_min": 297.56,
+    "temp_max": 300.05,
+    "pressure": 1015,
+    "humidity": 64,
+    "sea_level": 1015,
+    "grnd_level": 933
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 0.62,
+    "deg": 349,
+    "gust": 1.18
+  },
+  "rain": {
+    "1h": 3.16
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1661870592,
+  "sys": {
+    "type": 2,
+    "id": 2075663,
+    "country": "IT",
+    "sunrise": 1661834187,
+    "sunset": 1661882248
+  },
+  "timezone": 7200,
+  "id": 3163858,
+  "name": "Zocca",
+  "cod": 200
+}                        
+                        
+Campos de resposta da API no formato JSON
+
+coord
+  coord.lonLongitude do local
+  coord.latLatitude do local
+weather(mais informações Códigos de condições climáticas )
+  weather.idID da condição climática
+  weather.mainGrupo de parâmetros meteorológicos (chuva, neve, nuvens etc.)
+  weather.descriptionCondições climáticas dentro do grupo. Encontre mais aqui. Você pode obter a saída em seu idioma. Saber mais
+  weather.iconID do ícone do clima
+base  Parâmetro interno
+main
+  main.tempTemperatura. Padrão da unidade: Kelvin, Métrico: Celsius, Imperial: Fahrenheit
+  main.feels_likeTemperatura. Este parâmetro de temperatura é responsável pela percepção humana do clima. Padrão da unidade: Kelvin, Métrico: Celsius, Imperial: Fahrenheit
+  main.pressurePressão atmosférica ao nível do mar, hPa
+  main.humidityUmidade, %
+  main.temp_minTemperatura mínima no momento. Esta é a temperatura mínima observada atualmente (em grandes megalópoles e áreas urbanas). Encontre mais informações aqui. Padrão da unidade: Kelvin, Métrico: Celsius, Imperial: Fahrenheit
+  main.temp_maxTemperatura máxima no momento. Esta é a temperatura máxima observada atualmente (em grandes megalópoles e áreas urbanas). Encontre mais informações aqui. Padrão da unidade: Kelvin, Métrico: Celsius, Imperial: Fahrenheit
+  main.sea_levelPressão atmosférica ao nível do mar, hPa
+  main.grnd_levelPressão atmosférica ao nível do solo, hPa
+visibility  Visibilidade, medidor. O valor máximo da visibilidade é de 10 km
+wind
+  wind.speedVelocidade do vento. Unidade padrão: metro/s, Métrica: metros/s, Imperial: milhas/hora
+  wind.degDireção do vento, graus (meteorológico)
+  wind.gustRajada de vento. Unidade padrão: metro/s, Métrica: metros/s, Imperial: milhas/hora
+clouds
+  clouds.all Nebulosidade, %
+rain
+  rain.1h (quando disponível) Volume de chuva na última 1 hora, mm. Observe que apenas mm como unidades de medida estão disponíveis para este parâmetro
+  rain.3h (quando disponível) Volume de chuva nas últimas 3 horas, mm. Observe que apenas mm como unidades de medida estão disponíveis para este parâmetro
+snow
+  snow.1h(quando disponível) Volume de neve na última 1 hora, mm. Observe que apenas mm como unidades de medida estão disponíveis para este parâmetro
+  snow.3h (quando disponível) Volume de neve nas últimas 3 horas, mm. Observe que apenas mm como unidades de medida estão disponíveis para este parâmetro
+dt Hora do cálculo dos dados, unix, UTC
+sys
+  sys.typeParâmetro interno
+  sys.idParâmetro interno
+  sys.messageParâmetro interno
+  sys.countryCódigo do país (GB, JP etc.)
+  sys.sunriseHora do nascer do sol, unix, UTC
+  sys.sunsetHora do pôr do sol, unix, UTC
+timezone Mudança em segundos do UTC
+id ID da cidade. Observe que a funcionalidade integrada do geocodificador foi descontinuada. Saiba mais aqui
+name Nome da Cidade. Observe que a funcionalidade integrada do geocodificador foi descontinuada. Saiba mais aqui
+cod Parâmetro interno

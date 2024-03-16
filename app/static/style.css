@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #ececee;
+  margin: 0;
+}
+
+#barra-lateral {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: none; /* O objetivo do overflow é fazer com que conteúdos muito grandes possam caber dentro de uma página através do uso de barras de rolagem. */
+  width: 295px;
+  transition: all ease-in-out 0.5s; /* Transição da barra. */
+  padding: 0 12px;
+  z-index: 99997; /* Sobrepor a todos elementos */
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+.form-control-sm {
+  border: 1px solid;
+  border-color: #b2b2b8;
+  width: 270px;
+}
+
+#clima-atual {
+  margin-top: 20px;
+  padding: 60px 60px 150px 60px;
+  position: relative;
+  display: flex;
+}
+
+.img-clima {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.text-clima {
+  position: relative;
+  margin-top: 60px;
+}
+
+.text-clima li {
+  margin-top: 10px;
+  position: relative;
+  list-style: none;
+  left: -20px;
+  text-align: center;
+}
+
+main {
+  margin-left: 330px;
+}
+
+.card-atual {
+  border-radius: 16px;
+  height: 8rem;
+  width: 17rem;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+.card-text {
+  margin-top: 1rem;
+  font-size: 29px;
+  font-weight: 450;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.sun-values .card-text {
+  font-size: 16px;
+  margin: 4px 0px 0px 0px;
+}
+
+.unidade {
+  font-size: 16px;
+  display: inline;
+}
+
+.sun-ico {
+  color: orange;
+}
+
+#previsao h2,
+#cards h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 25px;
+}
+
+.card-prev {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 16px;
+  text-align: center;
+  width: 7em;
+  height: 15rem;
+}
+
+.icone img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.txt-prev-prox-dias {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+i.menu-mobile {
+  /*  Posição fixa na tela */
+  position: fixed;
+  color: #fff;
+  background-color: #252c90;
+  /* posição a direita */
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  border-radius: 4rem;
+  /* Quando passar o mouse me cima ele mostra que é clicavel */
+  cursor: pointer;
+  /* Ficar sobreposto a outros elementos */
+  z-index: 10;
+  width: 45px;
+  height: 45px;
+  /* Nao aparece na tela */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-nav-active {
+  overflow: hidden;
+}
+
+.menu-nav-active #barra-lateral {
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+  #barra-lateral {
+    left: -300px;
+  }
+  i.menu-mobile {
+    display: flex;
+  }
+  main {
+    margin-left: 0;
+  }
+  .card {
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+}
